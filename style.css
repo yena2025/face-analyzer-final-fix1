@@ -1,12 +1,30 @@
+body {
+  font-family: 'Apple SD Gothic Neo', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
 .container {
-  max-width: 600px;
-  margin: 50px auto;
-  padding: 20px;
-  font-family: sans-serif;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  margin-top: 80px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
-input[type="file"] {
-  margin: 20px 0;
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+img#preview {
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 8px;
 }
