@@ -1,0 +1,12 @@
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+input[type="file"] {
+  margin: 20px 0;
+}
