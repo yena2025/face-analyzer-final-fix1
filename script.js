@@ -1,9 +1,9 @@
-const URL = "./model/";
+const MODEL_URL = "./model/";
 let model;
 
 async function init() {
-  const modelURL = URL + "model.json";
-  const metadataURL = URL + "metadata.json";
+  const modelURL = MODEL_URL + "model.json";
+  const metadataURL = MODEL_URL + "metadata.json";
   model = await tmImage.load(modelURL, metadataURL);
 }
 
@@ -22,9 +22,15 @@ async function predict(imageElement) {
 document.getElementById("imageUpload").addEventListener("change", async function () {
   const file = this.files[0];
   const img = new Image();
+
   img.onload = async function () {
+    document.getElementById("preview")?.remove();
+    img.id = "preview";
+    document.body.appendChild(img);
+
     await init();
     await predict(img);
   };
-  img.src = URL.createObjectURL(file);
+
+  img.src = window.URL.createObjectURL(file);
 });
